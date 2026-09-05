@@ -98,7 +98,120 @@ export default function Quality() {
             ))}
           </div>
         </div>
+
+        {/* Declaration by the Founders */}
+<section className="bg-white py-[80px]">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <FadeIn>
+      <div className="text-center mb-12">
+        <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
+          FROM THE FOUNDERS
+        </div>
+
+        <h2 className="text-[28px] font-bold text-[#0D1B2A]">
+          Declaration by the Founders
+        </h2>
+      </div>
+    </FadeIn>
+
+    <FadeIn>
+      <div className="border border-[#E2E8F0] bg-white p-8 md:p-12">
+
+        <div className="border-l-[3px] border-accent pl-6 mb-8">
+          <p className="text-[17px] text-[#2C3E50] leading-[1.8] font-medium">
+            Amptrix operates with a dynamic, dedicated, and technically
+            competent team of experienced professionals who are committed to
+            delivering <strong>high-quality, reliable, and technically
+            compliant products</strong> to our valued customers.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+
+          <p className="text-[15px] text-[#637588] leading-[1.9]">
+            Our team possesses extensive experience in the field of
+            <strong className="text-[#2C3E50]">
+              {' '}Instrument Transformers and associated electrical solutions
+            </strong>, enabling us to understand customer requirements and
+            recommend suitable products based on technical specifications,
+            application conditions, system requirements, and operational needs.
+          </p>
+
+          <p className="text-[15px] text-[#637588] leading-[1.9]">
+            We are committed not only to supplying quality products but also
+            to providing
+            <strong className="text-[#2C3E50]">
+              {' '}complete technical support and professional engineering solutions
+            </strong>
+            {' '}throughout the customer engagement. Our experienced engineers
+            work closely with customers to understand their specific
+            requirements, assist in product selection, clarify technical
+            aspects, and provide appropriate solutions for challenging
+            applications.
+          </p>
+
+          <p className="text-[15px] text-[#637588] leading-[1.9]">
+            We further assure our customers of
+            <strong className="text-[#2C3E50]">
+              {' '}prompt, responsive, and dependable services
+            </strong>
+            {' '}at every stage—from initial technical discussions and product
+            selection to order execution, installation support,
+            troubleshooting, and after-sales service.
+          </p>
+
+          <p className="text-[15px] text-[#637588] leading-[1.9]">
+            At Amptrix, we continuously strive to improve our products,
+            services, and technical capabilities. We believe that our
+            combination of
+            <strong className="text-[#2C3E50]">
+              {' '}quality products, experienced professionals, engineering
+              expertise, and prompt customer support
+            </strong>
+            {' '}enables us to provide reliable and value-added solutions to
+            our customers.
+          </p>
+
+        </div>
+
+        <div className="mt-10 pt-8 border-t border-[#E2E8F0]">
+
+          <p className="text-[16px] text-[#2C3E50] leading-[1.8] font-semibold mb-8">
+            Our objective is to establish long-term relationships with
+            customers through consistent quality, technical expertise,
+            transparency, and timely support.
+          </p>
+
+          <div className="flex items-center gap-4">
+
+            <div className="h-10 w-10 bg-[#0D1B2A] text-white flex items-center justify-center rounded-[2px]">
+              <span className="text-[13px] font-bold">
+                RC
+              </span>
+            </div>
+
+            <div>
+              <div className="text-[15px] font-bold text-[#0D1B2A]">
+                Ranjitsinh Chhasatia
+              </div>
+
+              <div className="text-[11px] text-accent font-bold tracking-[0.12em] uppercase">
+                Founder-CEO
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </FadeIn>
+
+  </div>
+</section>
       </section>
+      
     </main>
   );
 }

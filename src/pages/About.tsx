@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import { Compass, Layers, Factory, FlaskConical, Headphones } from 'lucide-react';
+import { Compass, Layers, Factory, FlaskConical,PackageCheck, Headphones, BadgeCheck } from 'lucide-react';
 import { FadeIn } from '@/hooks/use-fade-in';
+import { Target, Eye } from "lucide-react";
+
 
 export default function About() {
   useEffect(() => {
@@ -50,94 +52,168 @@ export default function About() {
               </div>
             </FadeIn>
 
-            <FadeIn className="hidden lg:block">
-              <svg viewBox="0 0 400 400" width="100%" height="auto" className="border border-[#E2E8F0]">
-                <rect width="400" height="400" fill="#F4F6F8" />
-                <defs>
-                  <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <circle cx="2" cy="2" r="0.5" fill="#CBD5E0" />
-                  </pattern>
-                </defs>
-                <rect width="400" height="400" fill="url(#smallGrid)" />
-                
-                {/* Toroidal Core Outline */}
-                <circle cx="200" cy="200" r="120" fill="none" stroke="#2C3E50" strokeWidth="1.5" />
-                <circle cx="200" cy="200" r="80" fill="none" stroke="#2C3E50" strokeWidth="1" strokeDasharray="4 4" />
-                
-                {/* Windings Representation */}
-                {[...Array(36)].map((_, i) => (
-                  <path 
-                    key={i} 
-                    d={`M ${200 + Math.cos(i * 10 * Math.PI / 180) * 80} ${200 + Math.sin(i * 10 * Math.PI / 180) * 80} 
-                       L ${200 + Math.cos(i * 10 * Math.PI / 180) * 120} ${200 + Math.sin(i * 10 * Math.PI / 180) * 120}`} 
-                    stroke="#8A9BAC" strokeWidth="1.5" opacity="0.6" 
-                  />
-                ))}
-
-                {/* Annotation Lines */}
-                <path d="M 80 200 L 40 200 M 40 200 L 40 180" fill="none" stroke="#E8730A" strokeWidth="1" />
-                <circle cx="80" cy="200" r="2" fill="#E8730A" />
-                <text x="40" y="170" fill="#E8730A" fontSize="10" textAnchor="middle" letterSpacing="1">CORE</text>
-
-                <path d="M 280 140 L 320 100 L 350 100" fill="none" stroke="#E8730A" strokeWidth="1" />
-                <circle cx="280" cy="140" r="2" fill="#E8730A" />
-                <text x="350" y="95" fill="#E8730A" fontSize="10" textAnchor="end" letterSpacing="1">PRIMARY</text>
-
-                <path d="M 280 260 L 320 300 L 350 300" fill="none" stroke="#E8730A" strokeWidth="1" />
-                <circle cx="280" cy="260" r="2" fill="#E8730A" />
-                <text x="350" y="315" fill="#E8730A" fontSize="10" textAnchor="end" letterSpacing="1">SECONDARY</text>
-              </svg>
-            </FadeIn>
+            {/* <FadeIn className="hidden lg:block">
+              <div className="w-full aspect-square border border-[#E2E8F0] bg-[#F4F6F8] overflow-hidden">
+                <img
+                  src="/images/aboutimage.jpg"
+                  alt="Toroidal core transformer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+          </FadeIn> */}
+          <FadeIn className="hidden lg:block">
+  <div className="border border-[#E2E8F0] bg-[#F4F6F8] overflow-hidden">
+    <img
+      src="/images/aboutimage.jpg"
+      alt="Toroidal core transformer"
+      className="w-full h-auto object-cover"
+    />
+  </div>
+</FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="bg-[#F4F6F8] py-[80px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#E2E8F0] shadow-sm">
-            <FadeIn className="bg-white p-8 md:p-12 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
-              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">MISSION</div>
-              <p className="text-[#2C3E50] text-[16px] leading-relaxed">
-                To deliver the High Quality and Reliable Products through Efficient Manufacturing and strong Technical Support. To Responsive Customer support, On Time delivery ensuring Total Customer Satisfaction.
-              </p>
-            </FadeIn>
-            <FadeIn className="bg-white p-8 md:p-12">
-              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">VISION</div>
-              <p className="text-[#2C3E50] text-[16px] leading-relaxed">
-                We further Endeavour to Knowledge sharing, providing Technical Solutions, and exploring the Emerging Product design, Latest Manufacturing Techniques and the Unique Process Controls to produce and supply the Best in Class Products.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#E2E8F0] shadow-sm">
 
-      {/* Core Capabilities */}
-      <section className="bg-white py-[80px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10 text-center">Our Capabilities</h2>
-          </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {[
-              { icon: Compass, title: 'Design', desc: 'Precision engineering design for LV and MV applications' },
-              { icon: Layers, title: 'Development', desc: 'Iterative prototype and product development' },
-              { icon: Factory, title: 'Manufacturing', desc: 'APG Technology single-stage molding process' },
-              { icon: FlaskConical, title: 'Testing', desc: 'Full type testing and routine testing per IS standards' },
-              { icon: Headphones, title: 'Technical Support', desc: 'On-call engineering support for all customers' },
-            ].map((cap, idx) => {
-              const Icon = cap.icon;
-              return (
-                <FadeIn key={idx} className="border border-[#E2E8F0] p-6 bg-white hover:border-[#CBD5E0] transition-colors" style={{ transitionDelay: `${idx * 100}ms` }}>
-                  <Icon className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                  <h4 className="text-[#0D1B2A] font-bold text-[15px] mb-2">{cap.title}</h4>
-                  <p className="text-[#637588] text-[13px] leading-relaxed">{cap.desc}</p>
-                </FadeIn>
-              );
-            })}
-          </div>
+      {/* Mission */}
+      <FadeIn className="bg-white p-8 md:p-10 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
+        <div className="mb-5">
+          <Target
+            size={32}
+            strokeWidth={1.5}
+            className="text-accent"
+          />
         </div>
-      </section>
+
+        <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">
+          MISSION
+        </div>
+
+        <p className="text-[#2C3E50] text-[15px] leading-relaxed">
+          To deliver the High Quality and Reliable Products through Efficient
+          Manufacturing and strong Technical Support. To Responsive Customer
+          support, On Time delivery ensuring Total Customer Satisfaction.
+        </p>
+      </FadeIn>
+
+      {/* Vision */}
+      <FadeIn className="bg-white p-8 md:p-10 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
+        <div className="mb-5">
+          <Eye
+            size={32}
+            strokeWidth={1.5}
+            className="text-accent"
+          />
+        </div>
+
+        <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">
+          VISION
+        </div>
+
+        <p className="text-[#2C3E50] text-[15px] leading-relaxed">
+          We further Endeavour to Knowledge sharing, providing Technical
+          Solutions, and exploring the Emerging Product design, Latest
+          Manufacturing Techniques and the Unique Process Controls to produce
+          and supply the Best in Class Products.
+        </p>
+      </FadeIn>
+
+      {/* Competency */}
+      <FadeIn className="bg-white p-8 md:p-10">
+        <div className="mb-5">
+          <BadgeCheck
+            size={32}
+            strokeWidth={1.5}
+            className="text-accent"
+          />
+        </div>
+
+        <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">
+          COMPETENCY
+        </div>
+
+        <p className="text-[#2C3E50] text-[15px] leading-relaxed">
+          Team of Apmtrix is technically competent in the field of Instrument
+          Transformers, offering best-in-class product quality backed by
+          experienced engineers who provide expert technical solutions, prompt
+          services, and reliable support. We are committed to recommending the
+          best-fit solutions and optimized versions based on our customers’
+          specific technical and operational requirements.
+        </p>
+      </FadeIn>
+
+    </div>
+  </div>
+</section>
+      {/* Core Capabilities */}
+<section className="bg-white py-[80px]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <FadeIn>
+      <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10 text-center">
+        Our Capabilities
+      </h2>
+    </FadeIn>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+
+      {[
+        {
+          icon: Compass,
+          title: 'Design & Development',
+          desc: 'Precision engineered, compact and emerging products are designed and developed for LV & MV applications using materials from the latest available sources.'
+        },
+        {
+          icon: Factory,
+          title: 'Manufacturing',
+          desc: 'Products are manufactured using quality raw materials procured from reputed suppliers and molded by single-stage casting process. MV products are molded using the latest APG Technology.'
+        },
+        {
+          icon: FlaskConical,
+          title: 'Quality & Testing',
+          desc: 'All products undergo stringent quality checks at every stage of manufacturing. Each product is tested for all routine tests as per the applicable standards and certified before dispatch.'
+        },
+        {
+          icon: PackageCheck,
+          title: 'Supply',
+          desc: 'Products are properly packed and dispatched with the Tax Invoice through a nominated transporter as per the agreed terms.'
+        },
+        {
+          icon: Headphones,
+          title: 'Support After Sales',
+          desc: 'We undertake to provide the necessary technical support to our customers promptly whenever required.'
+        },
+      ].map((cap, idx) => {
+        const Icon = cap.icon;
+
+        return (
+          <FadeIn
+            key={idx}
+            className="border border-[#E2E8F0] p-6 bg-white hover:border-[#CBD5E0] transition-colors"
+            style={{ transitionDelay: `${idx * 100}ms` }}
+          >
+            <Icon
+              className="h-6 w-6 text-accent mb-5"
+              strokeWidth={1.5}
+            />
+
+            <h4 className="text-[#0D1B2A] font-bold text-[15px] mb-3 leading-snug">
+              {cap.title}
+            </h4>
+
+            <p className="text-[#637588] text-[13px] leading-relaxed">
+              {cap.desc}
+            </p>
+          </FadeIn>
+        );
+      })}
+
+    </div>
+  </div>
+</section>
 
       {/* Manufacturing Process */}
       <section className="bg-[#F4F6F8] py-[80px] border-t border-[#E2E8F0]">
