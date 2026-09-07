@@ -109,18 +109,21 @@ export default function Contact() {
                       <Globe className="h-5 w-5 text-accent" />
                     </div>
                     <span className="text-[#2C3E50] text-[15px] font-medium">
-                      www.amptrix.com
+                      www.amptrixenergy.com
                     </span>
                   </li>
                 </ul>
 
-                {/* Map Placeholder */}
-                <div className="h-[200px] border border-[#E2E8F0] bg-[#F4F6F8] rounded-[2px] flex flex-col items-center justify-center text-center relative overflow-hidden">
-                  {/* Grid pattern background for map feel */}
-                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#0D1B2A 1px, transparent 1px)', backgroundSize: '10px 10px' }}></div>
-                  <MapPin className="h-8 w-8 text-accent mb-2 relative z-10" />
-                  <div className="font-bold text-[#0D1B2A] text-[14px] relative z-10">Por Industrial Area</div>
-                  <div className="text-[#637588] text-[12px] relative z-10">Vadodara, Gujarat - 391243</div>
+                {/* Map */}
+                <div className="h-[200px] border border-[#E2E8F0] rounded-[2px] overflow-hidden relative">
+                  <iframe
+                    title="Amptrix Energy LLP Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.146397225944!2d73.17711357551856!3d22.12039327981633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc10003e7736f%3A0x69a04ce799a1c593!2sAmptrix%20energy%20llp!5e0!3m2!1sen!2sin!4v1788772173215!5m2!1sen!2sin"
+                    className="w-full h-full border-0"
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </FadeIn>
