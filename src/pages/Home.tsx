@@ -1,7 +1,16 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import { Shield, CheckCircle, Clock, Headphones, Check, Zap, Factory, Settings, Cpu, Building2 } from 'lucide-react';
+import { Shield, CheckCircle, Clock, Headphones, Check, Zap, Factory, Settings, Cpu, Building2, Database, CheckCircle2, Users } from 'lucide-react';
 import { FadeIn } from '@/hooks/use-fade-in';
+
+const applications = [
+  'Utilities',
+  'Power Plants',
+  'Industrial Plants',
+  'Switchgear Manufacturers',
+  'Control Panels',
+  'Engineering Consultants',
+];
 
 export default function Home() {
   useEffect(() => {
@@ -17,14 +26,20 @@ export default function Home() {
             
             {/* Left Content */}
             <div className="flex flex-col items-start space-y-6">
-              <span className="text-accent text-[11px] font-semibold tracking-[0.12em] uppercase">
-                INSTRUMENT TRANSFORMERS · CT / PT · LV / MV
-              </span>
+              <div className="flex flex-col gap-0">
+  <span className="text-accent text-[18px] font-semibold tracking-[0.12em] uppercase">
+    INSTRUMENT TRANSFORMERS · CT / PT · LV / MV
+  </span>
+
+  <span className="text-accent text-[11px] font-semibold tracking-[0.12em] uppercase -mt-1">
+    Excellence through Innovation
+  </span>
+</div>
               <h1 className="text-white text-[clamp(32px,4vw,52px)] font-bold leading-tight">
                 Precision Engineered Instrument Transformers
               </h1>
               <p className="text-[#8A9BAC] text-[16px] leading-relaxed max-w-xl">
-                Design, development and manufacturing of reliable Instrument Transformers for utilities, power industries, control panels and industrial applications.
+                Design, Development, Manufacturing and Supply the Best in Class LV/MV Instrument Transformers for Utilities, Power Industries, Switchgear & Control panel manufacturers and all other Industry Sectors
               </p>
               
               <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -119,7 +134,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <h2 className="text-[30px] text-[#0D1B2A] font-bold mb-12">
-              Engineering Experience. Manufacturing Discipline.
+              Engineering Expertise - Manufacturing Discipline - Professionally Managed
             </h2>
           </FadeIn>
           
@@ -167,7 +182,7 @@ export default function Home() {
       <section className="bg-[#F4F6F8] py-[80px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10">Why Prioritise Amptrix</h2>
+            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10">Why Amptrix?</h2>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <FadeIn>
@@ -175,7 +190,7 @@ export default function Home() {
                 <Shield className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
                 <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">Over Four Decades Experience</h3>
                 <p className="text-[#637588] text-[14px] leading-relaxed">
-                  Decades of deep engineering knowledge in instrument transformer design and manufacturing.
+                  Four Decades of Industry experience and having deep knowledge in the field of Instrument Transformers Business
                 </p>
               </div>
             </FadeIn>
@@ -184,7 +199,7 @@ export default function Home() {
                 <CheckCircle className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
                 <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">Consistent Quality</h3>
                 <p className="text-[#637588] text-[14px] leading-relaxed">
-                  Every unit undergoes strict quality checks and routine testing before dispatch.
+                  Each and Every product has to undergo strict Quality checks and strong QMS system.  They are 100% Tested for all the Routine tests before Dispatch from the factory
                 </p>
               </div>
             </FadeIn>
@@ -193,7 +208,7 @@ export default function Home() {
                 <Clock className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
                 <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">On Time Delivery</h3>
                 <p className="text-[#637588] text-[14px] leading-relaxed">
-                  Reliable supply commitments to utilities and industrial customers across India.
+                  Supply On time Delivery as per the committed Scheduled to the Customers and Honor the Project Time line across the Pan India
                 </p>
               </div>
             </FadeIn>
@@ -202,7 +217,7 @@ export default function Home() {
                 <Headphones className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
                 <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">Strong Technical Support</h3>
                 <p className="text-[#637588] text-[14px] leading-relaxed">
-                  Expert technical support and solutions from experienced engineers.
+                  Our objective is to provide Expert Technical Solutions and Support for selection of the Right Product by the Expert Engineers and Promptly attend the Services required
                 </p>
               </div>
             </FadeIn>
@@ -248,13 +263,14 @@ export default function Home() {
           <FadeIn>
             <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10">Where Our Transformers Work</h2>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
             {[
               { icon: Zap, title: 'Utilities', desc: 'Metering and protection for power distribution networks' },
               { icon: Factory, title: 'Power Industries', desc: 'Reliable measurement in generation and transmission facilities' },
               { icon: Settings, title: 'Control Panels', desc: 'Compact LV transformers for industrial control systems' },
               { icon: Cpu, title: 'Switchgears', desc: 'Accurate current and voltage measurement in switchgear assemblies' },
               { icon: Building2, title: 'Industrial Sectors', desc: 'Versatile instrument transformers across manufacturing and process industries' },
+              { icon: Database, title: 'Data Center', desc: 'Monitoring and protection in solar and wind energy systems' },
             ].map((app, idx) => {
               const Icon = app.icon;
               return (
@@ -268,6 +284,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <FadeIn>
+
+            <div className="text-center mb-12">
+
+              <Users
+                className="h-7 w-7 text-accent mx-auto mb-4"
+                strokeWidth={1.5}
+              />
+
+              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
+                APPLICATIONS
+              </div>
+
+              <h2 className="text-[28px] font-bold text-[#0D1B2A]">
+                Applications & Users
+              </h2>
+
+            </div>
+
+          </FadeIn>
+
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+
+            {applications.map((application, idx) => (
+              <FadeIn
+                key={idx}
+                className="border border-[#E2E8F0] p-6 min-h-[130px] flex items-center justify-center text-center hover:border-accent transition-colors"
+              >
+
+                <div>
+
+                  <CheckCircle2
+                    className="h-5 w-5 text-accent mx-auto mb-3"
+                    strokeWidth={1.5}
+                  />
+
+                  <span className="text-[13px] font-semibold text-[#2C3E50] leading-relaxed">
+                    {application}
+                  </span>
+
+                </div>
+
+              </FadeIn>
+            ))}
+
+          </div>
+
+          
+
+        </div>
 
       {/* CTA Banner */}
       <section className="bg-[#0D1B2A] py-[60px] border-t border-[#1A3050]">
@@ -284,7 +354,19 @@ export default function Home() {
             </Link>
           </FadeIn>
         </div>
+
+        
+
+        <section className="bg-white py-[80px]">
+
+        
+
+        
+
       </section>
+
+      </section>
+      
     </main>
   );
 }

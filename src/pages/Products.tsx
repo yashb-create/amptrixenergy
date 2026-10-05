@@ -414,7 +414,7 @@ export default function Products() {
           </div>
 
           <h1 className="text-[32px] text-[#0D1B2A] font-bold mb-4">
-            Products
+            Products Built in the Industrial Demands
           </h1>
 
           <p className="text-[#637588] max-w-4xl text-[15px] leading-relaxed">
@@ -498,7 +498,7 @@ export default function Products() {
           <FadeIn>
             <div className="text-center mb-10">
 
-              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
+              <div className="text-accent text-[18px] font-bold tracking-[0.15em] mb-3 uppercase">
                 DISTINCT FEATURES
               </div>
 
@@ -599,201 +599,10 @@ export default function Products() {
           {activeTab === 'LV' && (
             <FadeIn>
 
-              <div className="mb-12">
-
-                <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
-                  LOW VOLTAGE PRODUCT
-                </div>
-
-                <h2 className="text-[28px] font-bold text-[#0D1B2A]">
-                  General Technical Requirements
-                </h2>
-
-              </div>
+              
 
 
-              {/* CT / PT CARDS */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-
-                {/* CT */}
-                <div className="border border-[#E2E8F0] p-8 bg-white">
-
-                  <div className="flex items-center gap-3 mb-6">
-
-                    <Zap
-                      className="h-6 w-6 text-accent"
-                      strokeWidth={1.5}
-                    />
-
-                    <div>
-
-                      <h3 className="text-[20px] font-bold text-[#0D1B2A]">
-                        Current Transformers
-                      </h3>
-
-                      <span className="text-[11px] font-bold text-[#637588] tracking-widest uppercase">
-                        CT
-                      </span>
-
-                    </div>
-
-                  </div>
-
-
-                  <div className="space-y-3 text-[14px] text-[#2C3E50]">
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Standard Applicable
-                      </span>
-                      <span>IS: 16227</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Nominal System Voltage
-                      </span>
-                      <span>440 Volts</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Highest System Voltage
-                      </span>
-                      <span>720 Volts</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Rated Frequency
-                      </span>
-                      <span>50 Hz.</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Rated Primary Current
-                      </span>
-                      <span>5 to 6300 Amp</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4">
-                      <span className="text-[#637588]">
-                        Rated Burden
-                      </span>
-                      <span>2.5 to 30 VA</span>
-                    </div>
-
-                  </div>
-
-                </div>
-
-
-                {/* PT */}
-                <div className="border border-[#E2E8F0] p-8 bg-white">
-
-                  <div className="flex items-center gap-3 mb-6">
-
-                    <Zap
-                      className="h-6 w-6 text-[#2C3E50]"
-                      strokeWidth={1.5}
-                    />
-
-                    <div>
-
-                      <h3 className="text-[20px] font-bold text-[#0D1B2A]">
-                        Potential Transformers
-                      </h3>
-
-                      <span className="text-[11px] font-bold text-[#637588] tracking-widest uppercase">
-                        PT
-                      </span>
-
-                    </div>
-
-                  </div>
-
-
-                  <div className="space-y-3 text-[14px] text-[#2C3E50]">
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Standard Applicable
-                      </span>
-                      <span>IS: 3156</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Nominal System Voltage
-                      </span>
-                      <span>440 Volts</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Highest System Voltage
-                      </span>
-                      <span>720 Volts</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Primary Voltage
-                      </span>
-                      <span>440 Volts</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4 border-b border-[#F4F6F8] pb-2">
-                      <span className="text-[#637588]">
-                        Secondary Voltage
-                      </span>
-                      <span>230, 110, 110/√3 Volts</span>
-                    </div>
-
-                    <div className="flex justify-between gap-4">
-                      <span className="text-[#637588]">
-                        Rated Burden
-                      </span>
-                      <span>25 to 200 VA</span>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-              {/* =================================================
-                  LV PRODUCT SLIDESHOW
-              ================================================= */}
-
-              <div className="mb-16">
-
-                <div className="flex items-center gap-2 mb-6">
-
-                  <Eye
-                    className="h-5 w-5 text-accent"
-                    strokeWidth={1.5}
-                  />
-
-                  <h3 className="text-[20px] font-bold text-[#0D1B2A]">
-                    Product Pictures
-                  </h3>
-
-                </div>
-
-
-                <ProductSlideshow
-                  images={lvProductImages}
-                  currentImage={lvCurrentImage}
-                  setCurrentImage={setLvCurrentImage}
-                  title="Low Voltage Product"
-                />
-
-              </div>
-
+              
 
               {/* =================================================
                   LV FULL TECHNICAL TABLE
@@ -876,6 +685,36 @@ export default function Products() {
                   </table>
 
                 </div>
+
+
+                {/* =================================================
+                  LV PRODUCT SLIDESHOW
+              ================================================= */}
+
+              <div className="mb-16">
+
+                <div className="flex items-center gap-2 mb-6">
+
+                  <Eye
+                    className="h-5 w-5 text-accent"
+                    strokeWidth={1.5}
+                  />
+
+                  <h3 className="text-[20px] font-bold text-[#0D1B2A]">
+                    Product Pictures
+                  </h3>
+
+                </div>
+
+
+                <ProductSlideshow
+                  images={lvProductImages}
+                  currentImage={lvCurrentImage}
+                  setCurrentImage={setLvCurrentImage}
+                  title="Low Voltage Product"
+                />
+
+              </div>
 
               </div>
 
@@ -1075,7 +914,7 @@ export default function Products() {
 
           </FadeIn>
 
-
+          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
 
             {applications.map((application, idx) => (
@@ -1104,6 +943,32 @@ export default function Products() {
 
         </div>
 
+      </section>     
+
+      <section className="bg-[#F4F6F8] py-[80px] border-t border-[#E2E8F0]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-12">Our Manufacturing Process</h2>
+          </FadeIn>
+          <div className="relative border-l-2 border-[#CBD5E0] ml-4 md:ml-0">
+            {[
+              { title: 'DESIGN', desc: 'Engineering design with precise specifications' },
+              { title: 'DEVELOPMENT', desc: 'Prototype development and validation' },
+              { title: 'APG MANUFACTURING', desc: 'Automated Pressure Gelation molding process' },
+              { title: 'QUALITY CHECK', desc: 'Dimensional and visual inspection' },
+              { title: 'ROUTINE TESTING', desc: 'Electrical tests per IS: 16228 / IS: 3156' },
+              { title: 'DISPATCH', desc: 'Packaged and delivered on schedule' },
+            ].map((step, idx) => (
+              <FadeIn key={idx} className="mb-10 ml-8 relative">
+                <div className="absolute -left-[45px] top-0 h-[28px] w-[28px] rounded-full bg-accent text-white flex items-center justify-center font-bold text-[13px] ring-4 ring-[#F4F6F8]">
+                  {idx + 1}
+                </div>
+                <h4 className="text-[15px] font-bold text-[#0D1B2A] mb-1">{step.title}</h4>
+                <p className="text-[13px] text-[#637588]">{step.desc}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
       </section>
 
     </main>

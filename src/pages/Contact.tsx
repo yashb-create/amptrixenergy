@@ -93,7 +93,7 @@ export default function Contact() {
                       <Phone className="h-5 w-5 text-accent" />
                     </div>
                     <span className="text-[#2C3E50] text-[15px] font-medium tracking-wide">
-                      +91 98255 81168 <span className="text-[#8A9BAC] mx-2">|</span> +91 94268 88222
+                      +91 98255 81168 <span className="text-[#8A9BAC] mx-2">|</span> +91 94268 88222 <span className="text-[#8A9BAC] mx-2">|</span> +91 99095 3531
                     </span>
                   </li>
                   <li className="flex items-center gap-4">

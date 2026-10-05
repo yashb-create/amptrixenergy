@@ -18,7 +18,7 @@ export default function About() {
           <div className="text-[12px] text-[#637588] mb-2 font-medium tracking-wide">
             <Link href="/"><span className="hover:text-accent cursor-pointer transition-colors">Home</span></Link> &gt; <span>About Us</span>
           </div>
-          <h1 className="text-[32px] text-[#0D1B2A] font-bold">Built on Engineering Experience</h1>
+          <h1 className="text-[32px] text-[#0D1B2A] text-center font-bold">Built on Engineering Experience</h1>
         </div>
       </div>
 
@@ -29,27 +29,14 @@ export default function About() {
             <FadeIn>
               <div className="space-y-6 text-[#2C3E50] text-[16px] leading-relaxed mb-10">
                 <p>
-                  An Amptrix Energy LLP. is a registered Company based at Por, Dist. Vadodara, Gujarat, INDIA. The company has been established in 2025 by Engineers and Professionals having an Experience of more than FOUR decades.
+                  An Amptrix Energy LLP. is a registered Company based at Por, Dist. Vadodara, Gujarat, INDIA.  The company has been established in 2025 by the Engineers and Professionals having an Experience of more than FOUR decades.  They are fully competent and having a deep knowledge in the field of Design, Development, Manufacturing, Testing  and Selling the INSTRUMENT TRANSFORMERS used by the Utilities, Power Industries and all other Sectors of Industry.  
                 </p>
                 <p>
-                  They are fully competent and having a deep knowledge in the field of Design, Development, Manufacturing, Testing and Selling the Instrument Transformers used by Utilities, Power Industries and all other Sectors of Industry.
+                  The Products have been designed and developed with an Innovative Design concept, Emerging Technology and manufactured using latest APG Technology.  Thereby, the Products are aesthetically appealing, PD Free and Offers higher Tracking Index.  All Designs are fully Type Tested as per the National & International Standard.    Every units dispatched from the factory have to undergo the strengthen Quality checks and successfully passed all the Routine Tests. During development enough care is taken to cover all Technical requirements and made dimensionally universal to accommodate in all types of the LV/MV Control and Switchgears panels.  The Products have been designed and developed with an Innovative Design concept, Emerging Technology and manufactured using latest APG Technology.  Thereby, the Products are aesthetically appealing, PD Free and Offers higher Tracking Index.  All Designs are fully Type Tested as per the National & International Standard.    Every units dispatched from the factory have to undergo the strengthen Quality checks and successfully passed all the Routine Tests. During development enough care is taken to cover all Technical requirements and made dimensionally universal to accommodate in all types of the LV/MV Control and Switchgears panels.  
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="border border-[#E2E8F0] p-4 text-center">
-                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">Por, Vadodara</div>
-                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Gujarat, INDIA</div>
-                </div>
-                <div className="border border-[#E2E8F0] p-4 text-center">
-                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">Est. 2025</div>
-                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Registered Company</div>
-                </div>
-                <div className="border border-[#E2E8F0] p-4 text-center border-l-4 border-l-accent">
-                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">40+ Years</div>
-                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Engineering Experience</div>
-                </div>
-              </div>
+              
             </FadeIn>
 
             {/* <FadeIn className="hidden lg:block">
@@ -69,7 +56,23 @@ export default function About() {
       className="w-full h-auto object-cover"
     />
   </div>
+  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="border border-[#E2E8F0] p-4 text-center">
+                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">Por, Vadodara</div>
+                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Gujarat, INDIA</div>
+                </div>
+                <div className="border border-[#E2E8F0] p-4 text-center">
+                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">Est. 2025</div>
+                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Registered Company</div>
+                </div>
+                <div className="border border-[#E2E8F0] p-4 text-center border-l-4 border-l-accent">
+                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">40+ Years</div>
+                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Engineering Experience</div>
+                </div>
+              </div>
+  
 </FadeIn>
+
           </div>
         </div>
       </section>
@@ -82,7 +85,7 @@ export default function About() {
       <FadeIn className="bg-white p-8 md:p-10 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
         <div className="mb-5">
           <Target
-            size={32}
+            size={64}
             strokeWidth={1.5}
             className="text-accent"
           />
@@ -103,7 +106,7 @@ export default function About() {
       <FadeIn className="bg-white p-8 md:p-10 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
         <div className="mb-5">
           <Eye
-            size={32}
+            size={64}
             strokeWidth={1.5}
             className="text-accent"
           />
@@ -125,7 +128,7 @@ export default function About() {
       <FadeIn className="bg-white p-8 md:p-10">
         <div className="mb-5">
           <BadgeCheck
-            size={32}
+            size={64}
             strokeWidth={1.5}
             className="text-accent"
           />
@@ -216,31 +219,7 @@ export default function About() {
 </section>
 
       {/* Manufacturing Process */}
-      <section className="bg-[#F4F6F8] py-[80px] border-t border-[#E2E8F0]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-12">Our Manufacturing Process</h2>
-          </FadeIn>
-          <div className="relative border-l-2 border-[#CBD5E0] ml-4 md:ml-0">
-            {[
-              { title: 'DESIGN', desc: 'Engineering design with precise specifications' },
-              { title: 'DEVELOPMENT', desc: 'Prototype development and validation' },
-              { title: 'APG MANUFACTURING', desc: 'Automated Pressure Gelation molding process' },
-              { title: 'QUALITY CHECK', desc: 'Dimensional and visual inspection' },
-              { title: 'ROUTINE TESTING', desc: 'Electrical tests per IS: 16228 / IS: 3156' },
-              { title: 'DISPATCH', desc: 'Packaged and delivered on schedule' },
-            ].map((step, idx) => (
-              <FadeIn key={idx} className="mb-10 ml-8 relative">
-                <div className="absolute -left-[45px] top-0 h-[28px] w-[28px] rounded-full bg-accent text-white flex items-center justify-center font-bold text-[13px] ring-4 ring-[#F4F6F8]">
-                  {idx + 1}
-                </div>
-                <h4 className="text-[15px] font-bold text-[#0D1B2A] mb-1">{step.title}</h4>
-                <p className="text-[13px] text-[#637588]">{step.desc}</p>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </main>
   );
 }
