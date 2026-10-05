@@ -1,16 +1,72 @@
-import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Shield, CheckCircle, Clock, Headphones, Check, Zap, Factory, Settings, Cpu, Building2, Database, CheckCircle2, Users } from 'lucide-react';
 import { FadeIn } from '@/hooks/use-fade-in';
+import { useEffect, useState, type ReactNode } from 'react';
 
+// Put the matching images in /public/images/applications/ (or change the paths below).
 const applications = [
-  'Utilities',
-  'Power Plants',
-  'Industrial Plants',
-  'Switchgear Manufacturers',
-  'Control Panels',
-  'Engineering Consultants',
+  { name: 'Utilities', image: '/images/applications/utilities.jpg' },
+  { name: 'Power Plants', image: '/images/applications/power-plants.jpg' },
+  { name: 'Industrial Plants', image: '/images/applications/industrial-plants.jpg' },
+  { name: 'Switchgear Manufacturers', image: '/images/applications/switchgear-manufacturers.jpg' },
+  { name: 'Control Panels', image: '/images/applications/control-panels.jpg' },
+  { name: 'Engineering Consultants', image: '/images/applications/engineering-consultants.jpg' },
 ];
+
+// Small image shown in each tile; if the file is missing, falls back to the check icon.
+function AppImage({
+  src,
+  alt,
+  fallback,
+  className = 'mx-auto mb-3',
+}: {
+  src: string;
+  alt: string;
+  fallback: ReactNode;
+  className?: string;
+}) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return <>{fallback}</>;
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setFailed(true)}
+      className={`h-14 w-14 object-cover rounded-[3px] ${className}`}
+    />
+  );
+}
+
+function CardImage({
+  src,
+  alt,
+  fallback,
+}: {
+  src: string;
+  alt: string;
+  fallback: ReactNode;
+}) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return <div className="p-6 pb-0">{fallback}</div>;
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setFailed(true)}
+      className="w-full h-52 object-cover"
+    />
+  );
+}
 
 export default function Home() {
   useEffect(() => {
@@ -27,29 +83,29 @@ export default function Home() {
             {/* Left Content */}
             <div className="flex flex-col items-start space-y-6">
               <div className="flex flex-col gap-0">
-  <span className="text-accent text-[18px] font-semibold tracking-[0.12em] uppercase">
-    INSTRUMENT TRANSFORMERS · CT / PT · LV / MV
-  </span>
+                <span className="text-accent text-[20px] font-semibold tracking-[0.12em] uppercase">
+                  INSTRUMENT TRANSFORMERS · CT / PT · LV / MV
+                </span>
 
-  <span className="text-accent text-[11px] font-semibold tracking-[0.12em] uppercase -mt-1">
-    Excellence through Innovation
-  </span>
-</div>
-              <h1 className="text-white text-[clamp(32px,4vw,52px)] font-bold leading-tight">
+                <span className="text-accent text-[12px] font-semibold tracking-[0.12em] uppercase -mt-1">
+                  Excellence through Innovation
+                </span>
+              </div>
+              <h1 className="text-white text-[clamp(36px,4.4vw,58px)] font-bold leading-tight">
                 Precision Engineered Instrument Transformers
               </h1>
-              <p className="text-[#8A9BAC] text-[16px] leading-relaxed max-w-xl">
+              <p className="text-[#8A9BAC] text-[18px] leading-relaxed max-w-xl">
                 Design, Development, Manufacturing and Supply the Best in Class LV/MV Instrument Transformers for Utilities, Power Industries, Switchgear & Control panel manufacturers and all other Industry Sectors
               </p>
               
               <div className="flex flex-wrap items-center gap-4 pt-4">
                 <Link href="/products">
-                  <span className="border border-white text-white font-medium rounded-[3px] py-3 px-6 text-[15px] hover:bg-white/10 transition-colors cursor-pointer inline-block">
+                  <span className="border border-white text-white font-medium rounded-[3px] py-3 px-6 text-[17px] hover:bg-white/10 transition-colors cursor-pointer inline-block">
                     Explore Products
                   </span>
                 </Link>
                 <Link href="/contact">
-                  <span className="bg-accent border border-accent text-white font-medium rounded-[3px] py-3 px-6 text-[15px] hover:bg-accent/90 transition-colors cursor-pointer inline-block">
+                  <span className="bg-accent border border-accent text-white font-medium rounded-[3px] py-3 px-6 text-[17px] hover:bg-accent/90 transition-colors cursor-pointer inline-block">
                     Request a Quote
                   </span>
                 </Link>
@@ -57,7 +113,7 @@ export default function Home() {
 
               <div className="pt-8 flex items-center gap-3">
                 <div className="h-[1px] w-8 bg-[#2C3E50]"></div>
-                <p className="text-[12px] text-[#637588] tracking-wide uppercase">
+                <p className="text-[13px] text-[#4A5568] tracking-wide uppercase">
                   Por, Vadodara, Gujarat · Est. 2025 · 40+ Years Engineering Experience
                 </p>
               </div>
@@ -133,14 +189,14 @@ export default function Home() {
       <section className="bg-white py-[80px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h2 className="text-[30px] text-[#0D1B2A] font-bold mb-12">
+            <h2 className="text-[34px] text-[#0D1B2A] font-bold mb-12">
               Engineering Expertise - Manufacturing Discipline - Professionally Managed
             </h2>
           </FadeIn>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <FadeIn className="lg:col-span-7">
-              <div className="space-y-6 text-[#2C3E50] text-[16px] leading-relaxed">
+              <div className="space-y-6 text-[#2C3E50] text-[18px] leading-relaxed">
                 <p>
                   An Amptrix Energy LLP. is a registered Company based at Por, Dist. Vadodara, Gujarat, INDIA. The company has been established in 2025 by Engineers and Professionals having an Experience of more than FOUR decades.
                 </p>
@@ -153,16 +209,16 @@ export default function Home() {
             <FadeIn className="lg:col-span-5">
               <div className="border border-[#E2E8F0] p-8 h-full bg-white flex flex-col justify-center">
                 <div className="mb-6 pb-6 border-b border-[#E2E8F0]">
-                  <div className="text-[32px] font-bold text-[#0D1B2A] leading-none mb-1">40+ Years</div>
-                  <div className="text-[#8A9BAC] text-[14px]">Engineering Experience</div>
+                  <div className="text-[36px] font-bold text-[#0D1B2A] leading-none mb-1">40+ Years</div>
+                  <div className="text-[#8A9BAC] text-[16px]">Engineering Experience</div>
                 </div>
                 <div className="mb-8">
-                  <div className="text-[32px] font-bold text-accent leading-none mb-1">2025</div>
-                  <div className="text-[#8A9BAC] text-[14px]">Company Established</div>
+                  <div className="text-[36px] font-bold text-accent leading-none mb-1">2025</div>
+                  <div className="text-[#8A9BAC] text-[16px]">Company Established</div>
                 </div>
                 
                 <div className="mt-auto">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-[11px] font-bold text-[#2C3E50] tracking-wider">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-[12px] font-bold text-[#2C3E50] tracking-wider">
                     <span>DESIGN</span>
                     <span className="hidden sm:inline text-accent">→</span>
                     <span>DEVELOPMENT</span>
@@ -182,14 +238,14 @@ export default function Home() {
       <section className="bg-[#F4F6F8] py-[80px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10">Why Amptrix?</h2>
+            <h2 className="text-[28px] text-[#0D1B2A] font-bold mb-10">Why Amptrix?</h2>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md">
                 <Shield className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">Over Four Decades Experience</h3>
-                <p className="text-[#637588] text-[14px] leading-relaxed">
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Over Four Decades Experience</h3>
+                <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Four Decades of Industry experience and having deep knowledge in the field of Instrument Transformers Business
                 </p>
               </div>
@@ -197,8 +253,8 @@ export default function Home() {
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md" style={{ transitionDelay: '100ms' }}>
                 <CheckCircle className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">Consistent Quality</h3>
-                <p className="text-[#637588] text-[14px] leading-relaxed">
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Consistent Quality</h3>
+                <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Each and Every product has to undergo strict Quality checks and strong QMS system.  They are 100% Tested for all the Routine tests before Dispatch from the factory
                 </p>
               </div>
@@ -206,8 +262,8 @@ export default function Home() {
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md" style={{ transitionDelay: '200ms' }}>
                 <Clock className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">On Time Delivery</h3>
-                <p className="text-[#637588] text-[14px] leading-relaxed">
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">On Time Delivery</h3>
+                <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Supply On time Delivery as per the committed Scheduled to the Customers and Honor the Project Time line across the Pan India
                 </p>
               </div>
@@ -215,8 +271,8 @@ export default function Home() {
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md" style={{ transitionDelay: '300ms' }}>
                 <Headphones className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[16px] mb-2">Strong Technical Support</h3>
-                <p className="text-[#637588] text-[14px] leading-relaxed">
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Strong Technical Support</h3>
+                <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Our objective is to provide Expert Technical Solutions and Support for selection of the Right Product by the Expert Engineers and Promptly attend the Services required
                 </p>
               </div>
@@ -229,7 +285,7 @@ export default function Home() {
       <section className="bg-white py-[80px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10">Built for Industrial Demands</h2>
+            <h2 className="text-[28px] text-[#0D1B2A] font-bold mb-10">Built for Industrial Demands</h2>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-[#E2E8F0]">
             {[
@@ -247,8 +303,8 @@ export default function Home() {
                 <div className="flex gap-3">
                   <Check className="h-4 w-4 text-accent shrink-0 mt-0.5" strokeWidth={3} />
                   <div>
-                    <h4 className="text-[#0D1B2A] font-bold text-[14px] mb-1">{feature.title}</h4>
-                    <p className="text-[#637588] text-[12px] leading-relaxed">{feature.desc}</p>
+                    <h4 className="text-[#0D1B2A] font-bold text-[16px] mb-1">{feature.title}</h4>
+                    <p className="text-[#4A5568] text-[13px] leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -257,116 +313,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Applications */}
+      {/* Applications (with images) */}
       <section className="bg-[#F4F6F8] py-[80px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10">Where Our Transformers Work</h2>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
-            {[
-              { icon: Zap, title: 'Utilities', desc: 'Metering and protection for power distribution networks' },
-              { icon: Factory, title: 'Power Industries', desc: 'Reliable measurement in generation and transmission facilities' },
-              { icon: Settings, title: 'Control Panels', desc: 'Compact LV transformers for industrial control systems' },
-              { icon: Cpu, title: 'Switchgears', desc: 'Accurate current and voltage measurement in switchgear assemblies' },
-              { icon: Building2, title: 'Industrial Sectors', desc: 'Versatile instrument transformers across manufacturing and process industries' },
-              { icon: Database, title: 'Data Center', desc: 'Monitoring and protection in solar and wind energy systems' },
-            ].map((app, idx) => {
-              const Icon = app.icon;
-              return (
-                <FadeIn key={idx} className="bg-white border border-[#E2E8F0] p-6 rounded-[2px]" style={{ transitionDelay: `${idx * 100}ms` }}>
-                  <Icon className="h-6 w-6 text-[#2C3E50] mb-4" strokeWidth={1.5} />
-                  <h4 className="text-[#0D1B2A] font-bold text-[15px] mb-2">{app.title}</h4>
-                  <p className="text-[#637588] text-[13px] leading-relaxed">{app.desc}</p>
-                </FadeIn>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          <FadeIn>
-
-            <div className="text-center mb-12">
-
-              <Users
-                className="h-7 w-7 text-accent mx-auto mb-4"
-                strokeWidth={1.5}
-              />
-
-              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
-                APPLICATIONS
-              </div>
-
-              <h2 className="text-[28px] font-bold text-[#0D1B2A]">
-                Applications & Users
-              </h2>
-
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <FadeIn>
+      <h2 className="text-[28px] text-[#0D1B2A] font-bold mb-10">Where Our Transformers Work</h2>
+    </FadeIn>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        { icon: Zap, title: 'Utilities', desc: 'Metering and protection for power distribution networks', image: '/images/applications/utilities.jpeg' },
+        { icon: Factory, title: 'Power Industries', desc: 'Reliable measurement in generation and transmission facilities', image: '/images/applications/power-plants.jpeg' },
+        { icon: Settings, title: 'Control Panels', desc: 'Compact LV transformers for industrial control systems', image: '/images/applications/control-panels.jpeg' },
+        { icon: Cpu, title: 'Switchgears', desc: 'Accurate current and voltage measurement in switchgear assemblies', image: '/images/applications/switchgear-manufacturers.jpeg' },
+        { icon: Building2, title: 'Industrial Sectors', desc: 'Versatile instrument transformers across manufacturing and process industries', image: '/images/applications/industrial-plants.jpeg' },
+        { icon: Database, title: 'Data Center', desc: 'Monitoring and protection in solar and wind energy systems', image: '/images/applications/data-center.jpeg' },
+      ].map((app, idx) => {
+        const Icon = app.icon;
+        return (
+          <FadeIn
+            key={idx}
+            className="bg-white border border-[#E2E8F0] rounded-[2px] overflow-hidden h-full"
+            style={{ transitionDelay: `${idx * 100}ms` }}
+          >
+            <CardImage
+              src={app.image}
+              alt={app.title}
+              fallback={<Icon className="h-6 w-6 text-[#2C3E50]" strokeWidth={1.5} />}
+            />
+            <div className="p-6">
+              <h4 className="text-[#0D1B2A] font-bold text-[17px] mb-2">{app.title}</h4>
+              <p className="text-[#4A5568] text-[15px] leading-relaxed">{app.desc}</p>
             </div>
-
           </FadeIn>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-
-            {applications.map((application, idx) => (
-              <FadeIn
-                key={idx}
-                className="border border-[#E2E8F0] p-6 min-h-[130px] flex items-center justify-center text-center hover:border-accent transition-colors"
-              >
-
-                <div>
-
-                  <CheckCircle2
-                    className="h-5 w-5 text-accent mx-auto mb-3"
-                    strokeWidth={1.5}
-                  />
-
-                  <span className="text-[13px] font-semibold text-[#2C3E50] leading-relaxed">
-                    {application}
-                  </span>
-
-                </div>
-
-              </FadeIn>
-            ))}
-
-          </div>
-
-          
-
-        </div>
+      
 
       {/* CTA Banner */}
       <section className="bg-[#0D1B2A] py-[60px] border-t border-[#1A3050]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h2 className="text-white text-[26px] font-bold mb-4">Ready to Discuss Your Requirement?</h2>
-            <p className="text-[#8A9BAC] text-[15px] mb-8 max-w-2xl mx-auto">
+            <h2 className="text-white text-[30px] font-bold mb-4">Ready to Discuss Your Requirement?</h2>
+            <p className="text-[#8A9BAC] text-[17px] mb-8 max-w-2xl mx-auto">
               Our engineering team is ready to assist you with standard products or custom specifications.
             </p>
             <Link href="/contact">
-              <span className="border border-white text-white font-semibold rounded-[3px] py-3 px-8 text-[15px] hover:bg-white hover:text-[#0D1B2A] transition-colors cursor-pointer inline-block">
+              <span className="border border-white text-white font-semibold rounded-[3px] py-3 px-8 text-[17px] hover:bg-white hover:text-[#0D1B2A] transition-colors cursor-pointer inline-block">
                 Get in Touch
               </span>
             </Link>
           </FadeIn>
         </div>
-
-        
-
-        <section className="bg-white py-[80px]">
-
-        
-
-        
-
       </section>
-
-      </section>
-      
     </main>
   );
 }

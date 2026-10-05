@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Link } from 'wouter';
-import { Compass, Layers, Factory, FlaskConical,PackageCheck, Headphones, BadgeCheck } from 'lucide-react';
+import { Compass, Layers, Factory, FlaskConical, PackageCheck, Headphones, BadgeCheck, Zap } from 'lucide-react';
 import { FadeIn } from '@/hooks/use-fade-in';
 import { Target, Eye } from "lucide-react";
 
@@ -10,15 +10,41 @@ export default function About() {
     document.title = 'About Us | Amptrix Energy LLP';
   }, []);
 
+  function InfraImage({
+  src,
+  alt,
+  fallback,
+}: {
+  src: string;
+  alt: string;
+  fallback: ReactNode;
+}) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return <div className="pt-8">{fallback}</div>;
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setFailed(true)}
+      className="w-full h-48 object-cover"
+    />
+  );
+}
+
   return (
     <main className="w-full">
       {/* Page Header */}
       <div className="bg-[#F4F6F8] py-12 border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[12px] text-[#637588] mb-2 font-medium tracking-wide">
+          <div className="text-[13px] text-[#4A5568] mb-2 font-medium tracking-wide">
             <Link href="/"><span className="hover:text-accent cursor-pointer transition-colors">Home</span></Link> &gt; <span>About Us</span>
           </div>
-          <h1 className="text-[32px] text-[#0D1B2A] text-center font-bold">Built on Engineering Experience</h1>
+          <h1 className="text-[36px] text-[#0D1B2A] text-center font-bold">Built on Engineering Experience</h1>
         </div>
       </div>
 
@@ -27,7 +53,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
-              <div className="space-y-6 text-[#2C3E50] text-[16px] leading-relaxed mb-10">
+              <div className="space-y-6 text-[#2C3E50] text-[18px] leading-relaxed mb-10">
                 <p>
                   An Amptrix Energy LLP. is a registered Company based at Por, Dist. Vadodara, Gujarat, INDIA.  The company has been established in 2025 by the Engineers and Professionals having an Experience of more than FOUR decades.  They are fully competent and having a deep knowledge in the field of Design, Development, Manufacturing, Testing  and Selling the INSTRUMENT TRANSFORMERS used by the Utilities, Power Industries and all other Sectors of Industry.  
                 </p>
@@ -58,16 +84,16 @@ export default function About() {
   </div>
   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="border border-[#E2E8F0] p-4 text-center">
-                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">Por, Vadodara</div>
-                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Gujarat, INDIA</div>
+                  <div className="text-[16px] font-bold text-[#0D1B2A] mb-1">Por, Vadodara</div>
+                  <div className="text-[12px] text-[#4A5568] uppercase tracking-wide">Gujarat, INDIA</div>
                 </div>
                 <div className="border border-[#E2E8F0] p-4 text-center">
-                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">Est. 2025</div>
-                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Registered Company</div>
+                  <div className="text-[16px] font-bold text-[#0D1B2A] mb-1">Est. 2025</div>
+                  <div className="text-[12px] text-[#4A5568] uppercase tracking-wide">Registered Company</div>
                 </div>
                 <div className="border border-[#E2E8F0] p-4 text-center border-l-4 border-l-accent">
-                  <div className="text-[14px] font-bold text-[#0D1B2A] mb-1">40+ Years</div>
-                  <div className="text-[11px] text-[#637588] uppercase tracking-wide">Engineering Experience</div>
+                  <div className="text-[16px] font-bold text-[#0D1B2A] mb-1">40+ Years</div>
+                  <div className="text-[12px] text-[#4A5568] uppercase tracking-wide">Engineering Experience</div>
                 </div>
               </div>
   
@@ -91,11 +117,11 @@ export default function About() {
           />
         </div>
 
-        <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">
+        <div className="text-accent text-[12px] font-bold tracking-[0.15em] mb-4 uppercase">
           MISSION
         </div>
 
-        <p className="text-[#2C3E50] text-[15px] leading-relaxed">
+        <p className="text-[#2C3E50] text-[17px] leading-relaxed">
           To deliver the High Quality and Reliable Products through Efficient
           Manufacturing and strong Technical Support. To Responsive Customer
           support, On Time delivery ensuring Total Customer Satisfaction.
@@ -112,11 +138,11 @@ export default function About() {
           />
         </div>
 
-        <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">
+        <div className="text-accent text-[12px] font-bold tracking-[0.15em] mb-4 uppercase">
           VISION
         </div>
 
-        <p className="text-[#2C3E50] text-[15px] leading-relaxed">
+        <p className="text-[#2C3E50] text-[17px] leading-relaxed">
           We further Endeavour to Knowledge sharing, providing Technical
           Solutions, and exploring the Emerging Product design, Latest
           Manufacturing Techniques and the Unique Process Controls to produce
@@ -134,11 +160,11 @@ export default function About() {
           />
         </div>
 
-        <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-4 uppercase">
+        <div className="text-accent text-[12px] font-bold tracking-[0.15em] mb-4 uppercase">
           COMPETENCY
         </div>
 
-        <p className="text-[#2C3E50] text-[15px] leading-relaxed">
+        <p className="text-[#2C3E50] text-[17px] leading-relaxed">
           Team of Apmtrix is technically competent in the field of Instrument
           Transformers, offering best-in-class product quality backed by
           experienced engineers who provide expert technical solutions, prompt
@@ -156,7 +182,7 @@ export default function About() {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <FadeIn>
-      <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-10 text-center">
+      <h2 className="text-[28px] text-[#0D1B2A] font-bold mb-10 text-center">
         Our Capabilities
       </h2>
     </FadeIn>
@@ -203,11 +229,11 @@ export default function About() {
               strokeWidth={1.5}
             />
 
-            <h4 className="text-[#0D1B2A] font-bold text-[15px] mb-3 leading-snug">
+            <h4 className="text-[#0D1B2A] font-bold text-[17px] mb-3 leading-snug">
               {cap.title}
             </h4>
 
-            <p className="text-[#637588] text-[13px] leading-relaxed">
+            <p className="text-[#4A5568] text-[15px] leading-relaxed">
               {cap.desc}
             </p>
           </FadeIn>
@@ -218,8 +244,61 @@ export default function About() {
   </div>
 </section>
 
-      {/* Manufacturing Process */}
-      
+      {/* Infrastructure */}
+      <section className="bg-[#F4F6F8] py-[80px]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <FadeIn>
+      <h2 className="text-[28px] text-[#0D1B2A] font-bold mb-10 text-center">
+        Infrastructure
+      </h2>
+    </FadeIn>
+
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {[
+        {
+          icon: Layers,
+          title: 'Winding Station',
+          desc: 'Precision winding and finishing of primary and secondary coils under controlled process parameters.',
+          image: '/images/infrastructure/winding-station.jpeg',
+        },
+        {
+          icon: Zap,
+          title: 'Molding Station',
+          desc: 'Single-stage casting and APG molding, followed by final finishing for an aesthetically appealing, void-free product.',
+          image: '/images/infrastructure/molding-station.jpeg',
+        },
+        {
+          icon: FlaskConical,
+          title: 'Test Laboratory',
+          desc: 'In-house testing facility where every unit undergoes the full set of Routine Tests before dispatch.',
+          image: '/images/infrastructure/test-laboratory.jpeg',
+        },
+      ].map((item, idx) => {
+        const Icon = item.icon;
+        return (
+          <FadeIn
+            key={idx}
+            className="bg-white border border-[#E2E8F0] overflow-hidden text-center hover:border-[#CBD5E0] transition-colors"
+            style={{ transitionDelay: `${idx * 100}ms` }}
+          >
+            <InfraImage
+              src={item.image}
+              alt={item.title}
+              fallback={<Icon className="h-8 w-8 text-accent mx-auto" strokeWidth={1.5} />}
+            />
+            <div className="p-8">
+              <h4 className="text-[#0D1B2A] font-bold text-[17px] mb-3">{item.title}</h4>
+              <p className="text-[#4A5568] text-[15px] leading-relaxed">{item.desc}</p>
+            </div>
+          </FadeIn>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
+
     </main>
   );
 }

@@ -15,7 +15,6 @@ import {
   Activity,
   Leaf,
   Truck,
-  Users,
   ClipboardCheck,
   Zap,
   FileText,
@@ -255,21 +254,6 @@ export default function Products() {
 
   /*
    * ============================================================
-   * APPLICATIONS / USERS
-   * ============================================================
-   */
-
-  const applications = [
-    'Utilities',
-    'Power Industries',
-    'Switchgear & Control Panels',
-    'Solar Projects',
-    'Light & Heavy Industry',
-    'Data Centre',
-  ];
-
-  /*
-   * ============================================================
    * SIMPLE SLIDESHOW COMPONENT
    * ============================================================
    */
@@ -286,7 +270,7 @@ export default function Products() {
     if (!images || images.length === 0) {
       return (
         <div className="border border-[#E2E8F0] bg-[#F4F6F8] h-[400px] flex items-center justify-center">
-          <p className="text-[#637588] text-[14px]">
+          <p className="text-[#4A5568] text-[16px]">
             Product images will appear here.
           </p>
         </div>
@@ -362,7 +346,7 @@ export default function Products() {
         {/* Image Counter */}
         <div className="flex items-center justify-between mt-4">
 
-          <span className="text-[12px] text-[#637588]">
+          <span className="text-[13px] text-[#4A5568]">
             Product {currentImage + 1} of {images.length}
           </span>
 
@@ -401,7 +385,7 @@ export default function Products() {
       <section className="bg-[#F4F6F8] py-12 border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="text-[12px] text-[#637588] mb-2 font-medium tracking-wide">
+          <div className="text-[13px] text-[#4A5568] mb-2 font-medium tracking-wide">
             <Link href="/">
               <span className="hover:text-accent cursor-pointer transition-colors">
                 Home
@@ -413,11 +397,11 @@ export default function Products() {
             <span>Products</span>
           </div>
 
-          <h1 className="text-[32px] text-[#0D1B2A] font-bold mb-4">
+          <h1 className="text-[36px] text-[#0D1B2A] font-bold mb-4">
             Products Built in the Industrial Demands
           </h1>
 
-          <p className="text-[#637588] max-w-4xl text-[15px] leading-relaxed">
+          <p className="text-[#4A5568] max-w-4xl text-[17px] leading-relaxed">
             Amptrix Energy LLP. designs, manufactures and supplies a
             comprehensive range of Low Voltage and Medium Voltage
             Instrument Transformers. They are engineered for precision
@@ -439,11 +423,11 @@ export default function Products() {
           <FadeIn>
             <div className="mb-12">
 
-              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
+              <div className="text-accent text-[12px] font-bold tracking-[0.15em] mb-3 uppercase">
                 PRODUCT BUILT FOR
               </div>
 
-              <h2 className="text-[28px] text-[#0D1B2A] font-bold">
+              <h2 className="text-[32px] text-[#0D1B2A] font-bold">
                 Industrial Demands
               </h2>
 
@@ -470,11 +454,11 @@ export default function Products() {
                     strokeWidth={1.5}
                   />
 
-                  <h3 className="text-[16px] font-bold text-[#0D1B2A] mb-3">
+                  <h3 className="text-[18px] font-bold text-[#0D1B2A] mb-3">
                     {feature.title}
                   </h3>
 
-                  <p className="text-[13px] text-[#637588] leading-relaxed">
+                  <p className="text-[15px] text-[#4A5568] leading-relaxed">
                     {feature.desc}
                   </p>
 
@@ -498,11 +482,11 @@ export default function Products() {
           <FadeIn>
             <div className="text-center mb-10">
 
-              <div className="text-accent text-[18px] font-bold tracking-[0.15em] mb-3 uppercase">
+              <div className="text-accent text-[20px] font-bold tracking-[0.15em] mb-3 uppercase">
                 DISTINCT FEATURES
               </div>
 
-              <h2 className="text-[26px] font-bold text-[#0D1B2A]">
+              <h2 className="text-[30px] font-bold text-[#0D1B2A]">
                 Engineered for Reliability
               </h2>
 
@@ -523,7 +507,7 @@ export default function Products() {
                   strokeWidth={1.7}
                 />
 
-                <span className="text-[13px] font-semibold text-[#2C3E50] leading-relaxed">
+                <span className="text-[15px] font-semibold text-[#2C3E50] leading-relaxed">
                   {feature}
                 </span>
 
@@ -548,10 +532,10 @@ export default function Products() {
             <button
               type="button"
               onClick={() => setActiveTab('LV')}
-              className={`py-4 text-[15px] font-semibold transition-colors relative ${
+              className={`py-4 text-[17px] font-semibold transition-colors relative ${
                 activeTab === 'LV'
                   ? 'text-accent'
-                  : 'text-[#637588] hover:text-[#0D1B2A]'
+                  : 'text-[#4A5568] hover:text-[#0D1B2A]'
               }`}
             >
               Low Voltage
@@ -565,10 +549,10 @@ export default function Products() {
             <button
               type="button"
               onClick={() => setActiveTab('MV')}
-              className={`py-4 text-[15px] font-semibold transition-colors relative ${
+              className={`py-4 text-[17px] font-semibold transition-colors relative ${
                 activeTab === 'MV'
                   ? 'text-accent'
-                  : 'text-[#637588] hover:text-[#0D1B2A]'
+                  : 'text-[#4A5568] hover:text-[#0D1B2A]'
               }`}
             >
               Medium Voltage
@@ -617,7 +601,7 @@ export default function Products() {
                     strokeWidth={1.5}
                   />
 
-                  <h3 className="text-[20px] font-bold text-[#0D1B2A]">
+                  <h3 className="text-[22px] font-bold text-[#0D1B2A]">
                     General Technical Requirements
                   </h3>
 
@@ -632,19 +616,19 @@ export default function Products() {
 
                       <tr>
 
-                        <th className="p-4 text-[13px] font-bold text-[#0D1B2A]">
+                        <th className="p-4 text-[15px] font-bold text-[#0D1B2A]">
                           Sl. No.
                         </th>
 
-                        <th className="p-4 text-[13px] font-bold text-[#0D1B2A]">
+                        <th className="p-4 text-[15px] font-bold text-[#0D1B2A]">
                           Specifications
                         </th>
 
-                        <th className="p-4 text-[13px] font-bold text-[#0D1B2A]">
+                        <th className="p-4 text-[15px] font-bold text-[#0D1B2A]">
                           CTs
                         </th>
 
-                        <th className="p-4 text-[13px] font-bold text-[#0D1B2A]">
+                        <th className="p-4 text-[15px] font-bold text-[#0D1B2A]">
                           PTs
                         </th>
 
@@ -653,7 +637,7 @@ export default function Products() {
                     </thead>
 
 
-                    <tbody className="text-[13px] text-[#2C3E50]">
+                    <tbody className="text-[15px] text-[#2C3E50]">
 
                       {technicalSpecifications.map((row, idx) => (
                         <tr
@@ -700,7 +684,7 @@ export default function Products() {
                     strokeWidth={1.5}
                   />
 
-                  <h3 className="text-[20px] font-bold text-[#0D1B2A]">
+                  <h3 className="text-[22px] font-bold text-[#0D1B2A]">
                     Product Pictures
                   </h3>
 
@@ -731,15 +715,15 @@ export default function Products() {
 
               <div className="mb-12">
 
-                <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
+                <div className="text-accent text-[12px] font-bold tracking-[0.15em] mb-3 uppercase">
                   MEDIUM VOLTAGE PRODUCT
                 </div>
 
-                <h2 className="text-[28px] font-bold text-[#0D1B2A] mb-5">
+                <h2 className="text-[32px] font-bold text-[#0D1B2A] mb-5">
                   General Technical Requirements
                 </h2>
 
-                <p className="text-[#637588] max-w-4xl text-[15px] leading-relaxed">
+                <p className="text-[#4A5568] max-w-4xl text-[17px] leading-relaxed">
                   The specifications of the product are custom built. The
                   Ratio, Burden, Class of Accuracy, STC Rating, Installation
                   and Dimensions are variable and depend upon the Project
@@ -759,15 +743,15 @@ export default function Products() {
                     className="border border-[#E2E8F0] p-7 bg-white"
                   >
 
-                    <div className="text-[11px] text-accent font-bold tracking-[0.15em] mb-4">
+                    <div className="text-[12px] text-accent font-bold tracking-[0.15em] mb-4">
                       0{idx + 1}
                     </div>
 
-                    <h3 className="text-[16px] font-bold text-[#0D1B2A] mb-3">
+                    <h3 className="text-[18px] font-bold text-[#0D1B2A] mb-3">
                       {parameter.title}
                     </h3>
 
-                    <p className="text-[13px] text-[#637588] leading-relaxed">
+                    <p className="text-[15px] text-[#4A5568] leading-relaxed">
                       {parameter.desc}
                     </p>
 
@@ -790,7 +774,7 @@ export default function Products() {
                     strokeWidth={1.5}
                   />
 
-                  <h3 className="text-[20px] font-bold text-[#0D1B2A]">
+                  <h3 className="text-[22px] font-bold text-[#0D1B2A]">
                     Product Pictures
                   </h3>
 
@@ -825,11 +809,11 @@ export default function Products() {
 
             <div className="mb-12">
 
-              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
+              <div className="text-accent text-[12px] font-bold tracking-[0.15em] mb-3 uppercase">
                 MANUFACTURING PROCESS
               </div>
 
-              <h2 className="text-[28px] font-bold text-[#0D1B2A]">
+              <h2 className="text-[32px] font-bold text-[#0D1B2A]">
                 From Design to Dispatch
               </h2>
 
@@ -859,18 +843,18 @@ export default function Products() {
                       strokeWidth={1.5}
                     />
 
-                    <span className="text-[11px] font-bold text-[#CBD5E0]">
+                    <span className="text-[12px] font-bold text-[#CBD5E0]">
                       0{idx + 1}
                     </span>
 
                   </div>
 
 
-                  <h3 className="text-[15px] font-bold text-[#0D1B2A] mb-2">
+                  <h3 className="text-[17px] font-bold text-[#0D1B2A] mb-2">
                     {step.title}
                   </h3>
 
-                  <p className="text-[13px] text-[#637588] leading-relaxed">
+                  <p className="text-[15px] text-[#4A5568] leading-relaxed">
                     {step.desc}
                   </p>
 
@@ -884,92 +868,6 @@ export default function Products() {
 
       </section>
 
-
-      {/* ========================================================
-          APPLICATIONS / USERS
-      ======================================================== */}
-
-      <section className="bg-white py-[80px]">
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          <FadeIn>
-
-            <div className="text-center mb-12">
-
-              <Users
-                className="h-7 w-7 text-accent mx-auto mb-4"
-                strokeWidth={1.5}
-              />
-
-              <div className="text-accent text-[11px] font-bold tracking-[0.15em] mb-3 uppercase">
-                APPLICATIONS
-              </div>
-
-              <h2 className="text-[28px] font-bold text-[#0D1B2A]">
-                Applications & Users
-              </h2>
-
-            </div>
-
-          </FadeIn>
-
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-
-            {applications.map((application, idx) => (
-              <FadeIn
-                key={idx}
-                className="border border-[#E2E8F0] p-6 min-h-[130px] flex items-center justify-center text-center hover:border-accent transition-colors"
-              >
-
-                <div>
-
-                  <CheckCircle2
-                    className="h-5 w-5 text-accent mx-auto mb-3"
-                    strokeWidth={1.5}
-                  />
-
-                  <span className="text-[13px] font-semibold text-[#2C3E50] leading-relaxed">
-                    {application}
-                  </span>
-
-                </div>
-
-              </FadeIn>
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>     
-
-      <section className="bg-[#F4F6F8] py-[80px] border-t border-[#E2E8F0]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="text-[24px] text-[#0D1B2A] font-bold mb-12">Our Manufacturing Process</h2>
-          </FadeIn>
-          <div className="relative border-l-2 border-[#CBD5E0] ml-4 md:ml-0">
-            {[
-              { title: 'DESIGN', desc: 'Engineering design with precise specifications' },
-              { title: 'DEVELOPMENT', desc: 'Prototype development and validation' },
-              { title: 'APG MANUFACTURING', desc: 'Automated Pressure Gelation molding process' },
-              { title: 'QUALITY CHECK', desc: 'Dimensional and visual inspection' },
-              { title: 'ROUTINE TESTING', desc: 'Electrical tests per IS: 16228 / IS: 3156' },
-              { title: 'DISPATCH', desc: 'Packaged and delivered on schedule' },
-            ].map((step, idx) => (
-              <FadeIn key={idx} className="mb-10 ml-8 relative">
-                <div className="absolute -left-[45px] top-0 h-[28px] w-[28px] rounded-full bg-accent text-white flex items-center justify-center font-bold text-[13px] ring-4 ring-[#F4F6F8]">
-                  {idx + 1}
-                </div>
-                <h4 className="text-[15px] font-bold text-[#0D1B2A] mb-1">{step.title}</h4>
-                <p className="text-[13px] text-[#637588]">{step.desc}</p>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
 
     </main>
   );

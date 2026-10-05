@@ -59,10 +59,10 @@ export default function Contact() {
       {/* Page Header */}
       <div className="bg-white py-12 border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-[12px] text-[#637588] mb-2 font-medium tracking-wide">
+          <div className="text-[13px] text-[#4A5568] mb-2 font-medium tracking-wide">
             <Link href="/"><span className="hover:text-accent cursor-pointer transition-colors">Home</span></Link> &gt; <span>Contact</span>
           </div>
-          <h1 className="text-[32px] text-[#0D1B2A] font-bold">Let's Discuss Your Requirement</h1>
+          <h1 className="text-[36px] text-[#0D1B2A] font-bold">Let's Discuss Your Requirement</h1>
         </div>
       </div>
 
@@ -73,7 +73,7 @@ export default function Contact() {
             {/* Left - Contact Info */}
             <FadeIn>
               <div className="bg-white p-8 border border-[#E2E8F0] shadow-sm h-full">
-                <h2 className="font-bold text-[#0D1B2A] text-[18px] mb-8 pb-4 border-b border-[#E2E8F0]">
+                <h2 className="font-bold text-[#0D1B2A] text-[20px] mb-8 pb-4 border-b border-[#E2E8F0]">
                   AMPTRIX ENERGY LLP
                 </h2>
                 
@@ -82,7 +82,7 @@ export default function Contact() {
                     <div className="bg-[#F4F6F8] p-3 rounded-[2px] border border-[#E2E8F0] shrink-0 mt-1">
                       <MapPin className="h-5 w-5 text-accent" />
                     </div>
-                    <span className="text-[#2C3E50] text-[15px] leading-relaxed">
+                    <span className="text-[#2C3E50] text-[17px] leading-relaxed">
                       56, Mini Por Industrial Park, NH-48,<br />
                       Behind Sahyog Hotel, Por,<br />
                       Vadodara - 391243, Gujarat, INDIA
@@ -92,7 +92,7 @@ export default function Contact() {
                     <div className="bg-[#F4F6F8] p-3 rounded-[2px] border border-[#E2E8F0] shrink-0">
                       <Phone className="h-5 w-5 text-accent" />
                     </div>
-                    <span className="text-[#2C3E50] text-[15px] font-medium tracking-wide">
+                    <span className="text-[#2C3E50] text-[17px] font-medium tracking-wide">
                       +91 98255 81168 <span className="text-[#8A9BAC] mx-2">|</span> +91 94268 88222 <span className="text-[#8A9BAC] mx-2">|</span> +91 99095 3531
                     </span>
                   </li>
@@ -100,7 +100,7 @@ export default function Contact() {
                     <div className="bg-[#F4F6F8] p-3 rounded-[2px] border border-[#E2E8F0] shrink-0">
                       <Mail className="h-5 w-5 text-accent" />
                     </div>
-                    <span className="text-[#2C3E50] text-[15px] font-medium">
+                    <span className="text-[#2C3E50] text-[17px] font-medium">
                       info@amptrixenergy.com
                     </span>
                   </li>
@@ -108,7 +108,7 @@ export default function Contact() {
                     <div className="bg-[#F4F6F8] p-3 rounded-[2px] border border-[#E2E8F0] shrink-0">
                       <Globe className="h-5 w-5 text-accent" />
                     </div>
-                    <span className="text-[#2C3E50] text-[15px] font-medium">
+                    <span className="text-[#2C3E50] text-[17px] font-medium">
                       www.amptrixenergy.com
                     </span>
                   </li>
@@ -134,8 +134,8 @@ export default function Contact() {
                 {submitted ? (
                   <div className="flex flex-col items-center justify-center h-full text-center py-12">
                     <CheckCircle className="h-16 w-16 text-accent mb-6" />
-                    <h3 className="text-[20px] font-bold text-[#0D1B2A] mb-3">Enquiry Submitted Successfully</h3>
-                    <p className="text-[#637588] text-[15px] max-w-sm mx-auto">
+                    <h3 className="text-[22px] font-bold text-[#0D1B2A] mb-3">Enquiry Submitted Successfully</h3>
+                    <p className="text-[#4A5568] text-[17px] max-w-sm mx-auto">
                       Thank you for your enquiry. Our team will contact you shortly. We typically respond within 1 business day.
                     </p>
                     <button 
@@ -145,70 +145,70 @@ export default function Contact() {
                           name: '', company: '', email: '', phone: '', product: 'General Enquiry', message: ''
                         });
                       }}
-                      className="mt-8 border border-[#E2E8F0] text-[#2C3E50] font-medium py-2 px-6 rounded-[3px] hover:bg-[#F4F6F8] transition-colors text-[14px]"
+                      className="mt-8 border border-[#E2E8F0] text-[#2C3E50] font-medium py-2 px-6 rounded-[3px] hover:bg-[#F4F6F8] transition-colors text-[16px]"
                     >
                       Send Another Enquiry
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    <h2 className="font-bold text-[#0D1B2A] text-[18px] mb-6">Send an Enquiry</h2>
+                    <h2 className="font-bold text-[#0D1B2A] text-[20px] mb-6">Send an Enquiry</h2>
                     
                     <div>
-                      <label className="block text-[13px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Name *</label>
+                      <label className="block text-[15px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Name *</label>
                       <input 
                         type="text" 
                         name="name"
                         value={formState.name}
                         onChange={handleChange}
-                        className={`w-full border p-[10px_12px] text-[14px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent ${errors.name ? 'border-red-500' : 'border-[#E2E8F0] hover:border-[#CBD5E0]'}`} 
+                        className={`w-full border p-[10px_12px] text-[16px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent ${errors.name ? 'border-red-500' : 'border-[#E2E8F0] hover:border-[#CBD5E0]'}`} 
                       />
-                      {errors.name && <p className="text-red-500 text-[12px] mt-1">Name is required</p>}
+                      {errors.name && <p className="text-red-500 text-[13px] mt-1">Name is required</p>}
                     </div>
 
                     <div>
-                      <label className="block text-[13px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Company *</label>
+                      <label className="block text-[15px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Company *</label>
                       <input 
                         type="text" 
                         name="company"
                         value={formState.company}
                         onChange={handleChange}
-                        className={`w-full border p-[10px_12px] text-[14px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent ${errors.company ? 'border-red-500' : 'border-[#E2E8F0] hover:border-[#CBD5E0]'}`} 
+                        className={`w-full border p-[10px_12px] text-[16px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent ${errors.company ? 'border-red-500' : 'border-[#E2E8F0] hover:border-[#CBD5E0]'}`} 
                       />
-                      {errors.company && <p className="text-red-500 text-[12px] mt-1">Company is required</p>}
+                      {errors.company && <p className="text-red-500 text-[13px] mt-1">Company is required</p>}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-[13px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Email *</label>
+                        <label className="block text-[15px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Email *</label>
                         <input 
                           type="email" 
                           name="email"
                           value={formState.email}
                           onChange={handleChange}
-                          className={`w-full border p-[10px_12px] text-[14px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent ${errors.email ? 'border-red-500' : 'border-[#E2E8F0] hover:border-[#CBD5E0]'}`} 
+                          className={`w-full border p-[10px_12px] text-[16px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent ${errors.email ? 'border-red-500' : 'border-[#E2E8F0] hover:border-[#CBD5E0]'}`} 
                         />
-                        {errors.email && <p className="text-red-500 text-[12px] mt-1">Email is required</p>}
+                        {errors.email && <p className="text-red-500 text-[13px] mt-1">Email is required</p>}
                       </div>
                       <div>
-                        <label className="block text-[13px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Phone</label>
+                        <label className="block text-[15px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Phone</label>
                         <input 
                           type="tel" 
                           name="phone"
                           value={formState.phone}
                           onChange={handleChange}
-                          className="w-full border border-[#E2E8F0] hover:border-[#CBD5E0] p-[10px_12px] text-[14px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent" 
+                          className="w-full border border-[#E2E8F0] hover:border-[#CBD5E0] p-[10px_12px] text-[16px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent" 
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[13px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Product Requirement</label>
+                      <label className="block text-[15px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Product Requirement</label>
                       <select 
                         name="product"
                         value={formState.product}
                         onChange={handleChange}
-                        className="w-full border border-[#E2E8F0] hover:border-[#CBD5E0] p-[10px_12px] text-[14px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent"
+                        className="w-full border border-[#E2E8F0] hover:border-[#CBD5E0] p-[10px_12px] text-[16px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent"
                       >
                         <option value="Low Voltage Current Transformer CT">Low Voltage Current Transformer CT</option>
                         <option value="Low Voltage Potential Transformer PT">Low Voltage Potential Transformer PT</option>
@@ -220,20 +220,20 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-[13px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Message</label>
+                      <label className="block text-[15px] font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wide">Message</label>
                       <textarea 
                         name="message"
                         value={formState.message}
                         onChange={handleChange}
                         rows={4} 
-                        className="w-full border border-[#E2E8F0] hover:border-[#CBD5E0] p-[10px_12px] text-[14px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent resize-none"
+                        className="w-full border border-[#E2E8F0] hover:border-[#CBD5E0] p-[10px_12px] text-[16px] rounded-[3px] bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent resize-none"
                       ></textarea>
                     </div>
 
                     <div className="pt-2">
                       <button 
                         type="submit"
-                        className="w-full bg-accent text-white font-semibold py-3 px-6 rounded-[3px] hover:bg-accent/90 transition-colors text-[15px]"
+                        className="w-full bg-accent text-white font-semibold py-3 px-6 rounded-[3px] hover:bg-accent/90 transition-colors text-[17px]"
                       >
                         Send Enquiry
                       </button>
