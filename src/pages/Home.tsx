@@ -83,12 +83,13 @@ export default function Home() {
             {/* Left Content */}
             <div className="flex flex-col items-start space-y-6">
               <div className="flex flex-col gap-0">
-                <span className="text-accent text-[20px] font-semibold tracking-[0.12em] uppercase">
-                  INSTRUMENT TRANSFORMERS · CT / PT · LV / MV
+                <span className="text-accent text-[16px] font-semibold tracking-[0.12em] uppercase">
+                  Emerging Designed Instrument Transformers (CTs/PTs)
                 </span>
 
                 <span className="text-accent text-[12px] font-semibold tracking-[0.12em] uppercase -mt-1">
-                  Excellence through Innovation
+                  conforming to National and
+International Standard
                 </span>
               </div>
               <h1 className="text-white text-[clamp(36px,4.4vw,58px)] font-bold leading-tight">
@@ -244,7 +245,7 @@ export default function Home() {
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md">
                 <Shield className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Over Four Decades Experience</h3>
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Experience</h3>
                 <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Four Decades of Industry experience and having deep knowledge in the field of Instrument Transformers Business
                 </p>
@@ -253,7 +254,7 @@ export default function Home() {
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md" style={{ transitionDelay: '100ms' }}>
                 <CheckCircle className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Consistent Quality</h3>
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Quality</h3>
                 <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Each and Every product has to undergo strict Quality checks and strong QMS system.  They are 100% Tested for all the Routine tests before Dispatch from the factory
                 </p>
@@ -262,7 +263,7 @@ export default function Home() {
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md" style={{ transitionDelay: '200ms' }}>
                 <Clock className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">On Time Delivery</h3>
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Delivery</h3>
                 <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Supply On time Delivery as per the committed Scheduled to the Customers and Honor the Project Time line across the Pan India
                 </p>
@@ -271,7 +272,7 @@ export default function Home() {
             <FadeIn>
               <div className="bg-white border border-[#E2E8F0] p-6 h-full transition-shadow hover:shadow-md" style={{ transitionDelay: '300ms' }}>
                 <Headphones className="h-6 w-6 text-accent mb-4" strokeWidth={1.5} />
-                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Strong Technical Support</h3>
+                <h3 className="text-[#0D1B2A] font-bold text-[18px] mb-2">Support & Services</h3>
                 <p className="text-[#4A5568] text-[16px] leading-relaxed">
                   Our objective is to provide Expert Technical Solutions and Support for selection of the Right Product by the Expert Engineers and Promptly attend the Services required
                 </p>
@@ -317,16 +318,16 @@ export default function Home() {
       <section className="bg-[#F4F6F8] py-[80px]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <FadeIn>
-      <h2 className="text-[28px] text-[#0D1B2A] font-bold mb-10">Where Our Transformers Work</h2>
+      <h2 className="text-[28px] text-[#0D1B2A] font-bold mb-10">Where Our Product Works</h2>
     </FadeIn>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {[
-        { icon: Zap, title: 'Utilities', desc: 'Metering and protection for power distribution networks', image: '/images/applications/utilities.jpeg' },
-        { icon: Factory, title: 'Power Industries', desc: 'Reliable measurement in generation and transmission facilities', image: '/images/applications/power-plants.jpeg' },
-        { icon: Settings, title: 'Control Panels', desc: 'Compact LV transformers for industrial control systems', image: '/images/applications/control-panels.jpeg' },
-        { icon: Cpu, title: 'Switchgears', desc: 'Accurate current and voltage measurement in switchgear assemblies', image: '/images/applications/switchgear-manufacturers.jpeg' },
-        { icon: Building2, title: 'Industrial Sectors', desc: 'Versatile instrument transformers across manufacturing and process industries', image: '/images/applications/industrial-plants.jpeg' },
-        { icon: Database, title: 'Data Center', desc: 'Monitoring and protection in solar and wind energy systems', image: '/images/applications/data-center.jpeg' },
+        { icon: Zap, title: 'Utilities', desc: 'For Reliable Revenue measurement and Protections', image: '/images/applications/utilities.jpeg' },
+        { icon: Factory, title: 'Power Industries', desc: 'For Reliable Metering and various Protection Applications', image: '/images/applications/power-plants.jpeg' },
+        { icon: Settings, title: 'Switchgear & Control Panels', desc: 'Compact in size for Industrial Controls and Protection', image: '/images/applications/control-panels.jpeg' },
+        { icon: Cpu, title: 'Solar Projects', desc: 'Monitoring Energy Measurements and Protection of Solar & Wind projects', image: '/images/applications/switchgear-manufacturers.jpeg' },
+        { icon: Building2, title: 'Light & Heavy Industry', desc: 'Versatile instrument transformers across manufacturing and process industries', image: '/images/applications/industrial-plants.jpeg' },
+        { icon: Database, title: 'Data Center', desc: 'Monitoring the total Power Supply and Protection', image: '/images/applications/data-center.jpeg' },
       ].map((app, idx) => {
         const Icon = app.icon;
         return (

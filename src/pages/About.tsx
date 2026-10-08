@@ -55,10 +55,10 @@ export default function About() {
             <FadeIn>
               <div className="space-y-6 text-[#2C3E50] text-[18px] leading-relaxed mb-10">
                 <p>
-                  An Amptrix Energy LLP. is a registered Company based at Por, Dist. Vadodara, Gujarat, INDIA.  The company has been established in 2025 by the Engineers and Professionals having an Experience of more than FOUR decades.  They are fully competent and having a deep knowledge in the field of Design, Development, Manufacturing, Testing  and Selling the INSTRUMENT TRANSFORMERS used by the Utilities, Power Industries and all other Sectors of Industry.  
+                  An Amptrix Energy LLP. is a registered Company based at Por, Dist. Vadodara, Gujarat, INDIA. The company has been established in 2025 by the Engineers and Professionals having an Experience of more than FOUR decades. They are fully competent and having a deep knowledge in the field of Design, Development, Manufacturing, Testing and Selling the INSTRUMENT TRANSFORMERS used by the Utilities, Power Industries, Control & Switchgears Panels and all other Sectors of Industry.  
                 </p>
                 <p>
-                  The Products have been designed and developed with an Innovative Design concept, Emerging Technology and manufactured using latest APG Technology.  Thereby, the Products are aesthetically appealing, PD Free and Offers higher Tracking Index.  All Designs are fully Type Tested as per the National & International Standard.    Every units dispatched from the factory have to undergo the strengthen Quality checks and successfully passed all the Routine Tests. During development enough care is taken to cover all Technical requirements and made dimensionally universal to accommodate in all types of the LV/MV Control and Switchgears panels.  The Products have been designed and developed with an Innovative Design concept, Emerging Technology and manufactured using latest APG Technology.  Thereby, the Products are aesthetically appealing, PD Free and Offers higher Tracking Index.  All Designs are fully Type Tested as per the National & International Standard.    Every units dispatched from the factory have to undergo the strengthen Quality checks and successfully passed all the Routine Tests. During development enough care is taken to cover all Technical requirements and made dimensionally universal to accommodate in all types of the LV/MV Control and Switchgears panels.  
+                  The Products have been designed and developed with an Innovative Design concept, Emerging Technology and manufactured using latest APG Technology. Thereby, the Products are aesthetically appealing, PD Free and Offers higher Tracking Index. All Designs are fully Type Tested as per the National / International Standard. Every unit dispatched from the factory have undergone the strengthen Quality checks and successfully passed all the Routine Tests. Enough care is taken during development to cover all technical requirements and made dimensionally universal to accommodate in all types of the LV/MV Control and Switchgears panels.  
                 </p>
               </div>
               
@@ -122,9 +122,9 @@ export default function About() {
         </div>
 
         <p className="text-[#2C3E50] text-[17px] leading-relaxed">
-          To deliver the High Quality and Reliable Products through Efficient
-          Manufacturing and strong Technical Support. To Responsive Customer
-          support, On Time delivery ensuring Total Customer Satisfaction.
+          To deliver High Quality and Reliable Products through Efficient
+          Manufacturing and strong Technical Support. On
+Time delivery and Responsive Customer support ensuring Total Customer Satisfaction
         </p>
       </FadeIn>
 
@@ -165,12 +165,10 @@ export default function About() {
         </div>
 
         <p className="text-[#2C3E50] text-[17px] leading-relaxed">
-          Team of Apmtrix is technically competent in the field of Instrument
-          Transformers, offering best-in-class product quality backed by
-          experienced engineers who provide expert technical solutions, prompt
-          services, and reliable support. We are committed to recommending the
-          best-fit solutions and optimized versions based on our customers’
-          specific technical and operational requirements.
+          Team of Apmtrix is competent in the field of Instrument Transformers, offering best-in-class Quality
+product backed by competent engineers to provide expert solutions, prompt services, and On call support. We are
+committed to recommending the best-fit solutions and optimized versions based on customer’s operational
+requirements and technical specific.
         </p>
       </FadeIn>
 
@@ -193,17 +191,17 @@ export default function About() {
         {
           icon: Compass,
           title: 'Design & Development',
-          desc: 'Precision engineered, compact and emerging products are designed and developed for LV & MV applications using materials from the latest available sources.'
+          desc: 'Precision Engineered, Compact and Emerging Products are Designed and Developed for LV & MV applications using the material available from the Latest Sources. '
         },
         {
           icon: Factory,
           title: 'Manufacturing',
-          desc: 'Products are manufactured using quality raw materials procured from reputed suppliers and molded by single-stage casting process. MV products are molded using the latest APG Technology.'
+          desc: 'Products are manufactured using the Quality Raw Material procured from the approved Vendors. Product is Molded by Single stage casting process (MV Products are encapsulated by the latest APG Technology). Thereby the Product finish is Aesthetically appealing and Glossy.'
         },
         {
           icon: FlaskConical,
           title: 'Quality & Testing',
-          desc: 'All products undergo stringent quality checks at every stage of manufacturing. Each product is tested for all routine tests as per the applicable standards and certified before dispatch.'
+          desc: 'All products are undergone for stringent quality checks at every stage of manufacturing as per defined Process Control. Every product is tested for all the Routine tests as per the Order Specifications and the Test Report is provided before dispatched from the factory.'
         },
         {
           icon: PackageCheck,
@@ -213,7 +211,7 @@ export default function About() {
         {
           icon: Headphones,
           title: 'Support After Sales',
-          desc: 'We undertake to provide the necessary technical support to our customers promptly whenever required.'
+          desc: 'We undertake to provide the necessary technical support to our customers promptly on demand.'
         },
       ].map((cap, idx) => {
         const Icon = cap.icon;
@@ -259,19 +257,19 @@ export default function About() {
         {
           icon: Layers,
           title: 'Winding Station',
-          desc: 'Precision winding and finishing of primary and secondary coils under controlled process parameters.',
+          desc: 'Precision Winding and Finishing as per the Process control.',
           image: '/images/infrastructure/winding-station.jpeg',
         },
         {
           icon: Zap,
           title: 'Molding Station',
-          desc: 'Single-stage casting and APG molding, followed by final finishing for an aesthetically appealing, void-free product.',
+          desc: 'Single Stage molding is done as per defined Procedure.',
           image: '/images/infrastructure/molding-station.jpeg',
         },
         {
           icon: FlaskConical,
           title: 'Test Laboratory',
-          desc: 'In-house testing facility where every unit undergoes the full set of Routine Tests before dispatch.',
+          desc: 'In-house Testing facility is established to perform all Routine Tests as per the Standard and the Test Report is provided.',
           image: '/images/infrastructure/test-laboratory.jpeg',
         },
       ].map((item, idx) => {

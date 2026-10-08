@@ -84,7 +84,7 @@ export default function Products() {
     {
       icon: Ruler,
       title: 'Compact & Robust',
-      desc: 'Designed to overcome space constraints for installation in panels while remaining mechanically strong.',
+      desc: 'Designed to sustain tropical Environmental condition and overcome Space constrains for installation while remaining Mechanically Strong',
     },
     {
       icon: ShieldCheck,
@@ -114,12 +114,12 @@ export default function Products() {
     {
       icon: Headphones,
       title: 'Responsive & Support',
-      desc: 'Technical assistance is available on call from experienced engineers whenever required.',
+      desc: 'Technical assistance is available on call by an expert engineers whenever required.',
     },
     {
       icon: ClipboardCheck,
       title: 'Standards',
-      desc: 'Products are manufactured need-based in compliance with applicable National & International Standards.',
+      desc: 'The Products are manufactured in compliance to National or International Standards need based',
     },
   ];
 
@@ -217,23 +217,43 @@ export default function Products() {
   const manufacturingProcess = [
     {
       icon: Ruler,
-      title: 'Design',
-      desc: 'On receipt of PO, technical design parameters are worked out as per the Order Specifications.',
+      title: 'Designing',
+      desc: 'On receipt of PO, technical design parameters are workout as per the Order Specifications',
     },
     {
       icon: ClipboardCheck,
       title: 'Planning',
-      desc: 'Scheduling and material arrangement are carried out while taking care of other priorities.',
+      desc: 'Material arrangement and Scheduling for production taking care of other priorities',
     },
     {
       icon: Factory,
-      title: 'Manufacturing',
-      desc: 'Manufacturing starts with winding and proper insulation as per the defined Process Control.',
+      title: 'Winding',
+      desc: ' Winding is carried out as per the Design sheet and Standard procedure',
     },
     {
       icon: FlaskConical,
       title: 'Testing',
-      desc: 'Routine Tests are carried out at every stage to ensure the performance committed as per the PO and Standard.',
+      desc: 'Error tests are ensured for the specified Class of Accuracy',
+    },
+    {
+      icon: Truck,
+      title: 'Coil Finishing',
+      desc: ' Coil Assly. shall be finishing for the Terminal Lugs and Lead routing as required',
+    },
+    {
+      icon: Truck,
+      title: 'Resin Molding',
+      desc: ' The finished coil shall be positioned in the defined mold and necessary clearances are maintained before Resin Pouring as per the procedure',
+    },
+    {
+      icon: Truck,
+      title: 'Final Finishin',
+      desc: ' Flashes in case of Resin CT shall be removed by knife then Labeling and required Hardware shall be provided',
+    },
+    {
+      icon: Truck,
+      title: 'Final Testing',
+      desc: 'All routine Tests shall be performed on the Finished CT as per the Order Specifications. Test Results are recorded and Report is furnished with Supply',
     },
     {
       icon: CheckCircle2,
@@ -242,14 +262,10 @@ export default function Products() {
     },
     {
       icon: PackageCheck,
-      title: 'Packing',
-      desc: 'Products are packed with proper cushioning to restrict transit damages.',
+      title: 'Packing & Dispatch',
+      desc: 'Packing of the product is done by providing proper Cushioning to restrict transit Damages. Dispatch through the approved Transporter as per the Terms of Order',
     },
-    {
-      icon: Truck,
-      title: 'Dispatch',
-      desc: 'Dispatch is arranged with the approved Transporter as per the Terms given in the Order.',
-    },
+    
   ];
 
   /*
@@ -402,7 +418,7 @@ export default function Products() {
           </h1>
 
           <p className="text-[#4A5568] max-w-4xl text-[17px] leading-relaxed">
-            Amptrix Energy LLP. designs, manufactures and supplies a
+            We Design, manufactures and supplies a
             comprehensive range of Low Voltage and Medium Voltage
             Instrument Transformers. They are engineered for precision
             accuracy, compact in size and reliability for long-term
@@ -700,6 +716,7 @@ export default function Products() {
 
               </div>
 
+
               </div>
 
             </FadeIn>
@@ -792,7 +809,7 @@ export default function Products() {
 
             </FadeIn>
           )}
-
+<p> Note: For standard Ratings the Price List can be shared on request</p>
         </div>
       </section>
 
@@ -822,7 +839,7 @@ export default function Products() {
           </FadeIn>
 
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
 
             {manufacturingProcess.map((step, idx) => {
               const Icon = step.icon;
